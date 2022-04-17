@@ -139,6 +139,7 @@ class Play extends Phaser.Scene {
           this.ship01.update();           //update spaceships (x3)
           this.ship02.update();
           this.ship03.update();
+          this.fast1.update();
       }
       //check p1 collisions
       if(this.checkCollision(this.p1Rocket, this.ship03)) {
@@ -162,6 +163,13 @@ class Play extends Phaser.Scene {
           this.scoreLeft.text = this.p1Score;
           this.gameEnd += 1000;
       }
+      if(this.checkCollision(this.p1Rocket, this.fast1)) {
+        this.p1Rocket.reset();
+        this.shipExplode(this.fast1);
+        this.p1Score += this.fast1.points;
+        this.scoreLeft.text = this.p1Score;
+        this.gameEnd += 1000;
+      }
       //check p2 collisions
       if(game.settings.multiplay == 1){
           if(this.checkCollision(this.p2Rocket, this.ship03)) {
@@ -184,6 +192,13 @@ class Play extends Phaser.Scene {
               this.p2Score += this.ship03.points;
               this.scoreRight.text = this.p2Score;
               this.gameEnd += 1000;
+          }
+          if(this.checkCollision(this.p1Rocket, this.fast1)) {
+            this.p1Rocket.reset();
+            this.shipExplode(this.fast1);
+            this.p1Score += this.fast1.points;
+            this.scoreLeft.text = this.p1Score;
+            this.gameEnd += 1000;
           }
       }
   }
