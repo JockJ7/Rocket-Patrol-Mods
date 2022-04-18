@@ -37,7 +37,7 @@ class MenuMulti extends Phaser.Scene {
         this.add.text(centerX, centerY, 'P1: Use ↔ arrows to move and (F) to Fire', menuConfig).setOrigin(0.5);
         menuConfig.backgroundColor = '#3DBAFF';
         menuConfig.color = '#FFF';
-        this.add.text(centerX, centerY + textSpacer, 'P2: Use <N M> keys to move and (S) to Shoot', menuConfig).setOrigin(0.5);
+        this.add.text(centerX, centerY + textSpacer, 'P2: Use <A W> keys to move and (E) to Shoot', menuConfig).setOrigin(0.5);
         menuConfig.fontSize = '28px';
         menuConfig.backgroundColor = '#00FF00';
         menuConfig.color = '#000';
