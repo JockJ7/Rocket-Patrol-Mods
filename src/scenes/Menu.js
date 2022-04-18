@@ -4,12 +4,14 @@ class Menu extends Phaser.Scene {
     }
 
     preload(){
+        // load audio
         this.load.audio('sfx_select', './assets/blip_select12.wav');
         this.load.audio('sfx_explosion', './assets/explosion38.wav');
         this.load.audio('sfx_rocket', './assets/rocket_shot.wav');
     }
 
     create() {
+        // menu text configuration
         let menuConfig = {
         fontFamily: 'Courier',
         fontSize: '28px',
@@ -41,8 +43,6 @@ class Menu extends Phaser.Scene {
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
         keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
         keyUP = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP);
-        
-        //this.scene.start("playScene");
     }
 
     update(){
