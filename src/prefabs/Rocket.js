@@ -16,7 +16,7 @@ class Rocket extends Phaser.GameObjects.Sprite{
         else{
             //if 1 (or anything else) give P2 controls
             this.moveLeft = keyA;
-            this.moveRight = keyW;
+            this.moveRight = keyD;
             this.fire = keyE;
         }
     }
