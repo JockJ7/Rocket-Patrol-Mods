@@ -13,10 +13,10 @@ class MenuMulti extends Phaser.Scene {
     create() {
         // menu text configuration
         let menuConfig = {
-        fontFamily: 'Courier',
+        fontFamily: 'Ariel',
         fontSize: '28px',
-        backgroundColor: '#F3B141',
-        color: '#843605',
+        backgroundColor: '#fff700',
+        color: '#000',
         align: 'right',
         padding: {
             top: 5,
@@ -31,19 +31,23 @@ class MenuMulti extends Phaser.Scene {
         let textSpacer = 64;
 
         this.add.text(centerX, centerY - textSpacer, 'ROCKET PATROL TWO-PLAYER', menuConfig).setOrigin(0.5);
+        
         menuConfig.fontSize = '24px';
-        menuConfig.backgroundColor = '#FF4466';
+        menuConfig.backgroundColor = '#840523';
         menuConfig.color = '#FFF';
         this.add.text(centerX, centerY, 'P1: Use ↔ arrows to move and (F) to Fire', menuConfig).setOrigin(0.5);
-        menuConfig.backgroundColor = '#3DBAFF';
+        
+        menuConfig.backgroundColor = '#843105';
         menuConfig.color = '#FFF';
         this.add.text(centerX, centerY + textSpacer, 'P2: Use <A W> keys to move and (E) to Shoot', menuConfig).setOrigin(0.5);
+        
         menuConfig.fontSize = '28px';
-        menuConfig.backgroundColor = '#00FF00';
+        menuConfig.backgroundColor = '#5e8405';
         menuConfig.color = '#000';
         this.add.text(centerX, centerY + (2 * textSpacer), 'Press ← for Easy or → for Hard', menuConfig).setOrigin(0.5);
-        menuConfig.backgroundColor = '#F3B141';
-        menuConfig.color = '#843605';
+        
+        menuConfig.backgroundColor = '#fff700';
+        menuConfig.color = '#000';
         this.add.text(centerX, centerY + (3 * textSpacer), 'Press ↓ for One Player Mode', menuConfig).setOrigin(0.5);
 
         //define keys
