@@ -7,35 +7,36 @@ class Play extends Phaser.Scene {
       //load images/title sprites
       this.load.image('rocket', './assets/Blue_Rocket.png');
       this.load.image('rocketBlue', './assets/Blue_Rocket.png');
-      this.load.image('rocketRed', './assets/Green_rocket.png');
+      this.load.image('rocketGreen', './assets/Green_rocket.png');
       this.load.image('spaceship', './assets/New_Spaceship.png');
       this.load.image('starfield', './assets/New_Starfield.png');
       this.load.image('fastship', './assets/New_Fastship.png');
       // load spritesheet
       this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64,
       frameHeight: 32, startFrame: 0, endFrame: 9});
+      // load audio
       this.load.audio('sfx_select', './assets/blip_select12.wav');
       this.load.audio('sfx_explosion', './assets/explosion38.wav');
       this.load.audio('sfx_rocket', './assets/rocket_shot.wav');
   }
 
   create() {
-      //place tile sprite
+      // place tile sprite
       this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
-      //white rectangle borders
+      // white borders
       this.add.rectangle(5, 5, 630, 32, 0xFFFFFF).setOrigin(0, 0);
       this.add.rectangle(5, 443, 630, 32, 0xFFFFFF).setOrigin(0, 0);
       this.add.rectangle(5, 5, 32, 455, 0xFFFFFF).setOrigin(0, 0);
       this.add.rectangle(603, 5, 32, 455, 0xFFFFFF).setOrigin(0, 0);
-      //green UI background
+      // green UI background
       this.add.rectangle(37, 42, 566, 64, 0x00FF00).setOrigin(0,0);
       //define keys for P1
       keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
       keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
       keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
-      //define keys for P2
-      keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
-      keyN = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.N);
+      // define keys for P2
+      keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
+      key = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.N);
       keyM = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.M);
       //add rockets
       if(game.settings.multiplay == 1){
