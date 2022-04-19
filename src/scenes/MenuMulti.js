@@ -1,3 +1,4 @@
+//created a new scene where you switch over to another menu when you want to have two players
 class MenuMulti extends Phaser.Scene {
     constructor() {
         super("menuMultiScene");
