@@ -25,16 +25,18 @@ class Menu extends Phaser.Scene {
         fixedWidth: 0
         }   
 
-        //show menu text
+        //show menu text; Was easier to put x and y center here
         let centerX = game.config.width/2;
         let centerY = game.config.height/2;
         let textSpacer = 64;
 
         this.add.text(centerX, centerY - textSpacer, 'ROCKET PATROL', menuConfig).setOrigin(0.5);
         this.add.text(centerX, centerY, 'Use ↔ arrows to move and (F) to Fire', menuConfig).setOrigin(0.5);
+        
         menuConfig.backgroundColor = '#790584';
         menuConfig.color = '#000';
         this.add.text(centerX, centerY + textSpacer, 'Press ← for Easy or → for Hard', menuConfig).setOrigin(0.5);
+        
         menuConfig.backgroundColor = '#05843c';
         menuConfig.color = "#FFF";
         this.add.text(centerX, centerY + (2 * textSpacer), 'Press ↑ for Two Player Mode', menuConfig).setOrigin(0.5);
