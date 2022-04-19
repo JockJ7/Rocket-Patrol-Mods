@@ -106,7 +106,7 @@ class Play extends Phaser.Scene {
       // GAME OVER flag
       this.gameOver = false;
       
-      //30-second speedup clock
+      //30-second speed-up clock
       this.clock = this.time.delayedCall(30000, ()=> {
           game.settings.spaceshipSpeed += 1.5;
       }, null, this);
@@ -123,6 +123,7 @@ class Play extends Phaser.Scene {
 
   update(){
       this.starfield.tilePositionX -= 4;
+      
       // update if the game's over
       if(this.time.now - this.timeOffset >= game.settings.gameTimer && this.gameOver == false){
           this.timeUI.text = '0.0000';
